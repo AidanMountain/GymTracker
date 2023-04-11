@@ -1,14 +1,30 @@
 import java.util.Scanner;
 public class main {
-private static int choice, timeOfDay, time, section, population, cardioPopulation, benchPressPopulation, squatRackPopulation, freeWeightPopulation, backMachinePopulation;
+private static int memberOrEmployee, choice, timeOfDay, time, section, population, cardioPopulation, benchPressPopulation, squatRackPopulation, freeWeightPopulation, backMachinePopulation;
 private static int sixAM, sevenAM, eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM, sixPM, sevenPM, eightPM, ninePM, tenPM, elevenPM;
 public static void main(String args[])
 {
+
+    Scanner scan = new Scanner(System.in);
+
+    System.out.println("\nThank you for usng GymTracker! Are you a member or employee?");
+    System.out.println("Type '1' if you are a member.");
+    System.out.println("Type '2' if you are an employee.");
+    memberOrEmployee = scan.nextInt();
+
+    if(memberOrEmployee == 1){
+        System.out.println("Welcome to the Gym Info Center for Members. What information would you like to know?");
+        System.out.println("1. Current gym population");
+        System.out.println("2. Population of different sections");
+        System.out.println("3. Estimated population of the gym during different times");
+        System.out.println("4. Reserve a Time.");
+    }
+
+    if(memberOrEmployee == 2){
     System.out.println("Welcome to the employee gym information center, which information would you like to enter:");
     System.out.println("1. Current gym population");
     System.out.println("2. Population of different sections");
     System.out.println("3. Estimated population of the gym during different times");
-    Scanner scan = new Scanner(System.in);
     choice = scan.nextInt();
 
     // if statement for information update choice
@@ -368,5 +384,4 @@ public static void main(String args[])
     }
     }
 }
-'
-'
+}
