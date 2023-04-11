@@ -1,7 +1,9 @@
 import java.util.Scanner;
+
 public class main {
-private static int memberOrEmployee, choice, timeOfDay, time, section, population, cardioPopulation, benchPressPopulation, squatRackPopulation, freeWeightPopulation, backMachinePopulation;
+private static int memberOrEmployee, choice, choice1, timeOfDay, time, section, population, cardioPopulation, benchPressPopulation, squatRackPopulation, freeWeightPopulation, backMachinePopulation;
 private static int sixAM, sevenAM, eightAM, nineAM, tenAM, elevenAM, twelvePM, onePM, twoPM, threePM, fourPM, fivePM, sixPM, sevenPM, eightPM, ninePM, tenPM, elevenPM;
+//private static int gymPopulation;
 public static void main(String args[])
 {
 
@@ -18,6 +20,164 @@ public static void main(String args[])
         System.out.println("2. Population of different sections");
         System.out.println("3. Estimated population of the gym during different times");
         System.out.println("4. Reserve a Time.");
+        choice1 = scan.nextInt();
+    }
+    //display the information for the menu item selected
+
+    if(choice1 == 1){
+        double gymPop = (Math.random()*100);
+        System.out.println("The current gym population is: "+ Math.floor(gymPop));
+    }
+    else if(choice1 == 2){
+        System.out.println("Which section population would you like to see?");
+        System.out.println("1. Cardio section");
+        System.out.println("2. Free weights and benches");
+        System.out.println("3. Bench press");
+        System.out.println("4. Squat racks");
+        System.out.println("5. Back machines");
+        section = scan.nextInt();
+        if (section == 1)
+        {
+            double gymPop = (Math.random()*25);
+            System.out.println("The current population of the cardio section is "+ Math.floor(gymPop));
+        }
+        else if (section == 2)
+        {
+            double gymPop = (Math.random()*25);
+            System.out.println("The current population of the free weights section is "+ Math.floor(gymPop));
+        }
+        else if (section == 3)
+        {
+            double gymPop = (Math.random()*25);
+            System.out.println("The current population of the bench press section is "+ Math.floor(gymPop));
+        }
+        else if (section == 4)
+        {
+            double gymPop = (Math.random()*25);
+            System.out.println("The current population of the squat rack section is "+ Math.floor(gymPop));
+        }
+        else if (section == 5)
+        {
+            double gymPop = (Math.random()*25);
+            System.out.println("The current population of the bacck machines section is "+ Math.floor(gymPop));
+        }
+    }
+    if(choice1 == 3){
+        System.out.println("Enter whether the time you want to update is in the A.M or P.M: ");
+        System.out.println("1. A.M.");
+        System.out.println("2. P.M.");
+        int timeOfDay = scan.nextInt();
+        //if statement for time of day
+        if (timeOfDay == 1)
+        {
+            System.out.println("Enter a time from 6 A.M. to 11 A.M. that you would like to know the population of (enter a number from 6 to 11): ");
+            if (time == 6)
+            {
+                double gymPop = (Math.random()*100);
+                System.out.println("At 6:00 A.M. the gym population is : "+ Math.floor(gymPop));
+            }
+            else if (time == 7)
+            {
+                double gymPop = (Math.random()*100);
+                System.out.println("At 7:00 A.M. the gym population is : "+ Math.floor(gymPop));    
+            }
+            else if (time == 8)
+            {
+                double gymPop = (Math.random()*100);
+                System.out.println("At 8:00 A.M. the gym population is : "+ Math.floor(gymPop));
+            }
+            else if (time == 9)
+            {
+                double gymPop = (Math.random()*100);
+                System.out.println("At 9:00 A.M. the gym population is : "+ Math.floor(gymPop));
+            }
+            else if (time == 10)
+            {
+                double gymPop = (Math.random()*100);
+                System.out.println("At 10:00 A.M. the gym population is : "+ Math.floor(gymPop));
+            }
+            else if (time == 11)
+            {
+                double gymPop = (Math.random()*100);
+                System.out.println("At 11:00 A.M. the gym population is : "+ Math.floor(gymPop));
+            }
+            else
+            {
+                System.out.println("Error, enter a correct time from 12 to 11 P.M: ");
+                time = scan.nextInt();
+                while (time != 12 || time != 11 || time != 10 || time != 9 || time != 8 || time != 7 || time != 6 || time != 5 || time != 4 || time != 3 || time != 2 || time != 1)
+                {
+                    System.out.println("Error, enter a correct time from 12 to P.M: ");
+                    time = scan.nextInt();
+                }
+
+                if (time == 12)
+                {
+                    double gymPop = (Math.random()*100);
+                    System.out.println("At 12:00 P.M. the gym population is : "+ Math.floor(gymPop));
+                }
+                else if (time == 1)
+                {
+                    double gymPop = (Math.random()*100);
+                    System.out.println("At 1:00 P.M. the gym population is : "+ Math.floor(gymPop));    
+                }
+                else if (time == 2)
+                {
+                    double gymPop = (Math.random()*100);
+                    System.out.println("At 2:00 P.M. the gym population is : "+ Math.floor(gymPop));
+                }
+                else if (time == 3)
+                {
+                    double gymPop = (Math.random()*100);
+                    System.out.println("At 3:00 P.M. the gym population is : "+ Math.floor(gymPop));
+                }
+                else if (time == 4)
+                {
+                    double gymPop = (Math.random()*100);
+                    System.out.println("At 4:00 P.M. the gym population is : "+ Math.floor(gymPop));
+                }
+                else if (time == 5)
+                {
+                    double gymPop = (Math.random()*100);
+                    System.out.println("At 5:00 P.M. the gym population is : "+ Math.floor(gymPop));
+                }
+                else if (time == 6)
+                {
+                    double gymPop = (Math.random()*100);
+                    System.out.println("At 6:00 P.M. the gym population is : "+ Math.floor(gymPop));
+                }
+                else if (time == 7)
+                {
+                    double gymPop = (Math.random()*100);
+                    System.out.println("At 7:00 P.M. the gym population is : "+ Math.floor(gymPop));    
+                }
+                else if (time == 8)
+                {
+                    double gymPop = (Math.random()*100);
+                    System.out.println("At 8:00 P.M. the gym population is : "+ Math.floor(gymPop));
+                }
+                else if (time == 9)
+                {
+                    double gymPop = (Math.random()*100);
+                    System.out.println("At 9:00 P.M. the gym population is : "+ Math.floor(gymPop));
+                }
+                else if (time == 10)
+                {
+                    double gymPop = (Math.random()*100);
+                    System.out.println("At 10:00 P.M. the gym population is : "+ Math.floor(gymPop));
+                }
+                else if (time == 11)
+                {
+                    double gymPop = (Math.random()*100);
+                    System.out.println("At 11:00 P.M. the gym population is : "+ Math.floor(gymPop));
+                }
+            }
+        }
+        if(choice1 == 4){
+            System.out.println("Enter a time you would like to reserve");
+            int reservation = scan.nextInt();
+            System.out.println("You have successfully made a reservation for: "+ reservation);
+        }
     }
 
     if(memberOrEmployee == 2){
